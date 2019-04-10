@@ -3,16 +3,36 @@
 // Hover to view descriptions of existing attributes.
 // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 {
-	"version": "0.2.0",
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "Extension",
             "type": "extensionHost",
             "request": "launch",
+            "name": "Launch Extension",
             "runtimeExecutable": "code",
-            "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
-            ]
+            "args": ["--extensionDevelopmentPath=${workspaceRoot}"],
+            "stopOnEntry": false,
+            "sourceMaps": true,
+            "outFiles": ["${workspaceRoot}/client/out/**/*.js"],
+            "preLaunchTask": "npm: watch",
+            "env": {
+                "FYRBASE": "${env:FYRBASE}"
+            }
+        },
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "Launch Extension (Debug)",
+            "runtimeExecutable": "code",
+            "args": ["--extensionDevelopmentPath=${workspaceRoot}"],
+            "stopOnEntry": false,
+            "sourceMaps": true,
+            "outFiles": ["${workspaceRoot}/client/out/**/*.js"],
+            "preLaunchTask": "npm: watch",
+            "env": {
+                "FYRBASE": "${env:FYRBASE}",
+                "DEBUG": "TRUE"
+            }
         }
     ]
 }

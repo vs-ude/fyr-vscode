@@ -6,9 +6,17 @@
   "publisher": "vs-ude",
   "author": "VS.UDE (https://vs.uni-due.de)",
   "license": "BSD-3-Clause",
+  "main": "lib/extension.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vs-ude/fyr-vscode"
+  },
+  "dependencies": {
+    "vscode": "^1.1.18",
+    "vscode-languageclient": "^4.1.4"
+  },
+  "devDependencies": {
+    "vsce": "^1.59.0"
   },
   "engines": {
     "vscode": "^1.25.0"
@@ -17,8 +25,16 @@
     "Programming Languages"
   ],
   "scripts": {
-    "publish": "vsce publish"
+    "vscode:prepublish": "npm run update-vscode && npm run compile",
+    "publish": "vsce publish",
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "update-vscode": "node ./node_modules/vscode/bin/install",
+    "postinstall": "node ./node_modules/vscode/bin/install"
   },
+  "activationEvents": [
+    "onLanguage:fyr"
+  ],
   "contributes": {
     "languages": [
       {
@@ -39,9 +55,30 @@
         "scopeName": "source.fyr",
         "path": "./syntaxes/fyr.tmLanguage"
       }
-    ]
-  },
-  "devDependencies": {
-    "vsce": "^1.59.0"
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Fyr-vscode configuration",
+      "properties": {
+        "fyr.langserverPath": {
+          "scope": "window",
+          "type": "string",
+          "default": "",
+          "description": "IDE: The path to the fyr language server directory."
+        },
+        "fyr.keepClosedFileErrors": {
+          "scope": "window",
+          "type": "boolean",
+          "default": true,
+          "description": "IDE: If set to false, only errors from currently opened files will be shown."
+        },
+        "fyr.enableIDE": {
+          "scope": "window",
+          "type": "boolean",
+          "default": false,
+          "description": "Enables the IDE integration."
+        }
+      }
+    }
   }
 }
