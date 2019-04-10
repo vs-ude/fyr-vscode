@@ -1,0 +1,47 @@
+{
+  "name": "fyr-vscode",
+  "displayName": "Fyr language support",
+  "description": "Fyr language syntax highlighter and IDE integration",
+  "version": "0.5.0",
+  "publisher": "vs-ude",
+  "author": "VS.UDE (https://vs.uni-due.de)",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vs-ude/fyr-vscode"
+  },
+  "engines": {
+    "vscode": "^1.25.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "publish": "vsce publish"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "fyr",
+        "aliases": [
+          "Fyr",
+          "fyr"
+        ],
+        "extensions": [
+          "fyr"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fyr",
+        "scopeName": "source.fyr",
+        "path": "./syntaxes/fyr.tmLanguage"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^1.59.0"
+  }
+}
