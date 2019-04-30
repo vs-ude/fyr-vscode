@@ -2,7 +2,7 @@
   "name": "fyr-vscode",
   "displayName": "Fyr language support",
   "description": "Fyr language syntax highlighter and IDE integration",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "publisher": "vs-ude",
   "author": "VS.UDE (https://vs.uni-due.de)",
   "license": "BSD-3-Clause",
