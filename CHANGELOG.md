@@ -3,6 +3,7 @@
 ## 0.5.1
 
 - Update metadata
+- Remove the async keyword
 
 ## 0.5.0
 

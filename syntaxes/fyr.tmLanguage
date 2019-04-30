@@ -191,7 +191,7 @@
             <array>
               <dict>
                 <key>match</key>
-                <string>(export|async|\s)*</string>
+                <string>(export|\s)*</string>
                 <key>name</key>
                 <string>keyword.meta.fyr</string>
               </dict>
@@ -712,7 +712,7 @@
           </dict>
           <dict>
             <key>match</key>
-            <string>\b(async|spawn|yield|component)\b</string>
+            <string>\b(spawn|yield|component)\b</string>
             <key>name</key>
             <string>keyword.execution.fyr</string>
           </dict>

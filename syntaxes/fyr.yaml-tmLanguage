@@ -54,7 +54,7 @@ patterns:
                 name: keyword.control.fyr
             '2':
                 patterns:
-                    - 
+                    -
                         comment: for (let|var..in..)
                         match: '(let|var) ([\w\s,]+) (in) (.*)'
                         captures:
@@ -79,7 +79,7 @@ patterns:
         captures:
             '1':
                 patterns:
-                    - {match: '(export|async|\s)*', name: keyword.meta.fyr}
+                    - {match: '(export|\s)*', name: keyword.meta.fyr}
             '2':
                 name: keyword.meta.function.fyr
             '3':
@@ -279,7 +279,7 @@ repository:
                 match: \b(break|continue|else|for|if|in|return)\b
                 name: keyword.control.fyr
             -
-                match: \b(async|spawn|yield|component)\b
+                match: \b(spawn|yield|component)\b
                 name: keyword.execution.fyr
             -
                 match: \b(export|extends|func|import|is|package)\b
