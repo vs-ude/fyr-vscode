@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1
+
+- Update metadata
+
 ## 0.5.0
 
 - Fix detection of constant functions
