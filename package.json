@@ -41,7 +41,5 @@
       }
     ]
   },
-  "devDependencies": {
-    "vsce": "^1.59.0"
-  }
+  "devDependencies": {}
 }

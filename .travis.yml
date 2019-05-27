@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "8"
+dist: xenial
+stages:
+  - deploy
+install:
+  - npm install
+after_success:
+  - npm install -g vsce
+jobs:
+  include:
+    - stage: deploy
+      deploy:
+        provider: script
+        script: vsce publish -p $PUBLISHER_TOKEN
+        skip_cleanup: true
+        on:
+          branch: master
