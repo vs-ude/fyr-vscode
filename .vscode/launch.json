@@ -9,8 +9,17 @@
             "name": "Extension",
             "type": "extensionHost",
             "request": "launch",
-            "runtimeExecutable": "code",
             "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ]
+        },
+        {
+            "name": "Extension (Arch Linux OSS)",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "/usr/lib/code/out/cli.js",
+                "/usr/lib/code/code.js",
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ]
         }
