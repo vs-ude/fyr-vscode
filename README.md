@@ -1,5 +1,7 @@
 # Fyr Language Syntax
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vs-ude/fyr-vscode.svg)](https://greenkeeper.io/)
+
 This extension adds syntax highlighting for the Fyr language.
 It's currently under heavy development so some things are not working correctly.  
 It is available on the Visual Studio Code [Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-ude.fyr).
